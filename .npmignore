@@ -41,13 +41,14 @@ test
 Thumbs.db
 .DS_Store
 *.yml
-src/*
+src
 src/package.json
 src/app/App_Resources
 src/app/app.*
 src/app/assets
+src/app/images
 src/app/package.json
-!src/app/services/*
+!src/app/parallax*
 *.spec.*
 *.e2e.*
 CONTRIBUTING.md
