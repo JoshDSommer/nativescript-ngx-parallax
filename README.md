@@ -4,7 +4,7 @@
 [![NativeScript Parallax Scroll Effect. Click to Play](https://img.youtube.com/vi/sR_Ku7dsm2c/0.jpg)](https://www.youtube.com/embed/sR_Ku7dsm2c)
 
 ###Install
-`$ npm install nativescript-ng2-parallax --save`
+`$ tns plugin add nativescript-ng2-parallax`
 
 ###Example useage
 
