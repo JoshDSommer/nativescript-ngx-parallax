@@ -1,6 +1,6 @@
 {
 	"name": "nativescript-ng2-parallax",
-	"version": "0.1.3",
+	"version": "0.1.7",
 	"description": "Parallax NativeScript + Angular plugin.",
 	"main": "nativescript-ng2-parallax.js",
 	"nativescript": {
