@@ -79,12 +79,23 @@ class DemoComponent {
 
 
 To use the parallax scroll view you need to have to containers inside of the `<parallax-view></parallax-view>` tag.
-one container needs the `head` attribute and the other the `body`. You can specify the head containers height with
-`<parallax-view head-height="<VALUE>">` If you have controls you want to fade out with the scroll of the head container their id's can be passed as array of strings like so:
-`<parallax-view [controls-to-fade]="['control1','control2']">`. Both the `head-height` and `controls-to-fade` are not required. If no `head-height` value is set then it defaults to `300`.
+one container needs the `head` attribute and the other the `body`. In the above example they are both `StackLayout`s
+
+
+You can specify the head containers height with
+`<parallax-view head-height="<VALUE>">`
+
+
+If you have controls you want to fade out with the scroll of the head container their id's can be passed as array of strings like so:
+`<parallax-view [controls-to-fade]="['control1','control2']">`.
+
+
+Both the `head-height` and `controls-to-fade` are not required. If no `head-height` value is set then it defaults to `300`.
+
 
 Special thanks to Nathan Walker for setting up the Angular 2 Plugin seed that I used to help get this plugin up and running. More info can be found about it here:
 https://github.com/NathanWalker/nativescript-ng2-plugin-seed
+
 
 ##License
 
