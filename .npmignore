@@ -58,7 +58,6 @@ test-main.js
 tsconfig.json
 tslint.json
 typedoc.json
-typings.json
 typings
 .travis.yml
 .jshintrc

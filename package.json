@@ -1,6 +1,6 @@
 {
 	"name": "nativescript-ng2-parallax",
-	"version": "0.1.0",
+	"version": "0.1.3",
 	"description": "Parallax NativeScript + Angular plugin.",
 	"main": "nativescript-ng2-parallax.js",
 	"nativescript": {
@@ -50,7 +50,22 @@
 		"zone.js": "0.5.15"
 	},
 	"devDependencies": {
+		"autoprefixer": "^6.3.2",
+		"jasmine-core": "^2.3.4",
+		"jasmine-spec-reporter": "^2.4.0",
+		"karma": "0.13.19",
+		"karma-chrome-launcher": "^0.2.1",
+		"karma-coverage": "^0.5.2",
+		"karma-jasmine": "^0.3.7",
+		"karma-phantomjs-launcher": "^1.0.0",
+		"karma-sourcemap-loader": "^0.3.7",
+		"karma-typescript-preprocessor": "^0.0.21",
+		"node-sass": "^3.4.2",
+		"phantomjs-prebuilt": "^2.1.4",
+		"remap-istanbul": "^0.5.1",
+		"rimraf": "^2.5.1",
 		"systemjs-builder": "^0.15.7",
+		"traceur": "^0.0.91",
 		"tsconfig-lint": "^0.5.0",
 		"tslint": "^3.4.0",
 		"typedoc": "^0.3.12",
