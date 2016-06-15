@@ -1,4 +1,4 @@
-import {Component, OnInit, Input } from 'angular2/core';
+import {Component, OnInit, Input } from '@angular/core';
 import * as _scrollViewModule from 'ui/scroll-view';
 import * as _pages from 'ui/page';
 import * as _frame from 'ui/frame';

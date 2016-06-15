@@ -4,7 +4,7 @@
 import {nativeScriptBootstrap} from 'nativescript-angular/application';
 
 // angular
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 
 // import parallaxView
 import {ParallaxView} from 'nativescript-ng2-parallax/nativescript-ng2-parallax';
