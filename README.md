@@ -1,5 +1,7 @@
 #NativeScript Angular2 parallax view component
 
+[![npm](https://img.shields.io/npm/v/nativescript-ng2-parallax.svg)](https://www.npmjs.com/package/nativescript-ng2-parallax)
+[![npm](https://img.shields.io/npm/dt/nativescript-ng2-parallax.svg?label=npm%20downloads)](https://www.npmjs.com/package/nativescript-ng2-parallax)
 
 [![NativeScript Parallax Scroll Effect. Click to Play](https://img.youtube.com/vi/sR_Ku7dsm2c/0.jpg)](https://www.youtube.com/embed/sR_Ku7dsm2c)
 
