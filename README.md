@@ -98,6 +98,12 @@ Both the `head-height` and `controls-to-fade` are not required. If no `head-heig
 Special thanks to Nathan Walker for setting up the Angular 2 Plugin seed that I used to help get this plugin up and running. More info can be found about it here:
 https://github.com/NathanWalker/nativescript-ng2-plugin-seed
 
+## Contributors
+
+* Josh Sommer ([TheOriginalJosh](https://github.com/TheOriginalJosh))
+* Nathan Walker ([NathanWalker](https://github.com/NathanWalker))
+* Leo Caseiro ([leocaseiro](https://github.com/leocaseiro))
+* Michael Solati ([MichaelSolati](https://github.com/MichaelSolati))
 
 ##License
 
