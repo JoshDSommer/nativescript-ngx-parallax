@@ -1,10 +1,9 @@
-import {Component, OnInit, Input } from '@angular/core';
-import * as _scrollViewModule from 'ui/scroll-view';
-import * as _pages from 'ui/page';
-import * as _frame from 'ui/frame';
-import * as _label from 'ui/label';
-import * as _view from 'ui/core/view';
-import * as _stackLayout from 'ui/layouts/stack-layout';
+import { Component, OnInit, Input } from '@angular/core';
+import { ScrollView, ScrollEventData } from 'ui/scroll-view';
+import { Page } from "ui/page";
+import { topmost } from 'ui/frame';
+import { View } from 'ui/core/view';
+import { StackLayout } from 'ui/layouts/stack-layout';
 
 @Component({
 	selector: 'parallax-view',
@@ -25,17 +24,15 @@ import * as _stackLayout from 'ui/layouts/stack-layout';
 })
 
 export class ParallaxView implements OnInit {
-
-	private page: _pages.Page;
-	private topView: _stackLayout.StackLayout;
-	private scrollView: _scrollViewModule.ScrollView;
-	private viewsToFade: _view.View[];
+	private _topView: StackLayout;
+	private _scrollView: ScrollView;
+	private _viewsToFade: View[];
 
 	@Input('head-height') public topViewHeight: number;
 	@Input('controls-to-fade') public controlsToFade: string[];
-	constructor() {
-		this.page = _frame.topmost().currentPage;
-		this.viewsToFade = [];
+
+	constructor(private _page: Page) {
+		this._viewsToFade = [];
 
 		if (this.topViewHeight == null) {
 			this.topViewHeight = 300; //default height if it is not set.
@@ -48,40 +45,41 @@ export class ParallaxView implements OnInit {
 		let prevOffset = -10;
 		let topOpacity = 1;
 
-		this.topView = <_stackLayout.StackLayout>this.page.getViewById('topView');
-		this.topView.height = this.topViewHeight;
+		this._topView = <StackLayout>this._page.getViewById('topView');
+		this._topView.height = this.topViewHeight;
 
 		//find each control specified to fade.
 		this.controlsToFade.forEach((id: string): void => {
-			let newView: _view.View = this.page.getViewById(id);
+			let newView: View = this._page.getViewById(id);
 			if (newView != null) {
-				this.viewsToFade.push(newView);
+				this._viewsToFade.push(newView);
 			}
 		});
 
-		this.scrollView = <_scrollViewModule.ScrollView>this.page.getViewById('scrollView');
+		this._scrollView = <ScrollView>this._page.getViewById('scrollView');
 
-		this.scrollView.on(_scrollViewModule.ScrollView.scrollEvent, (args: _scrollViewModule.ScrollEventData) => {
-			if (prevOffset <= this.scrollView.verticalOffset) {
-				if (this.topView.height >= 0) {
-					this.topView.height = this.getTopViewHeight(this.topViewHeight, this.scrollView.verticalOffset);
+		this._scrollView.on(ScrollView.scrollEvent, (args: ScrollEventData) => {
+			if (prevOffset <= this._scrollView.verticalOffset) {
+				if (this._topView.height >= 0) {
+					this._topView.height = this.getTopViewHeight(this.topViewHeight, this._scrollView.verticalOffset);
 				}
 			} else {
-				if (this.topView.height <= this.topViewHeight) {
-					this.topView.height = this.getTopViewHeight(this.topViewHeight, this.scrollView.verticalOffset);
+				if (this._topView.height <= this.topViewHeight) {
+					this._topView.height = this.getTopViewHeight(this.topViewHeight, this._scrollView.verticalOffset);
 				}
 			}
+
 			//fades in and out label in topView
-			if (this.scrollView.verticalOffset < this.topViewHeight) {
-				topOpacity = parseFloat((1 - (this.scrollView.verticalOffset * 0.01)).toString());
+			if (this._scrollView.verticalOffset < this.topViewHeight) {
+				topOpacity = parseFloat((1 - (this._scrollView.verticalOffset * 0.01)).toString());
 				if (topOpacity > 0 && topOpacity <= 1) {
 					//fade each control
-					this.viewsToFade.forEach((view: _view.View): void => {
+					this._viewsToFade.forEach((view: View): void => {
 						view.opacity = topOpacity;
 					});
 				}
 			}
-			prevOffset = this.scrollView.verticalOffset;
+			prevOffset = this._scrollView.verticalOffset;
 		});
 	}
 
@@ -92,5 +90,4 @@ export class ParallaxView implements OnInit {
 			return 0;
 		}
 	}
-
 }
