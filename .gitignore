@@ -64,4 +64,12 @@ src/platforms
 src/hooks
 src/node_modules
 
+demo/platforms
+demo/hooks
+demo/node_modules
+
+parallax/platforms
+parallax/hooks
+parallax/node_modules
+
 platforms

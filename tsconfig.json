@@ -9,7 +9,6 @@
     "moduleResolution": "node"
   },
   "files": [
-    "typings/browser.d.ts",
     "nativescript-ng2-parallax.ts"
   ],
   "compileOnSave": false,
