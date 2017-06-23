@@ -20,7 +20,8 @@ import { Component } from "@angular/core";
 			background-color:#212121;
 			background-image:url('~/images/mountains.png');
 			background-size:cover;
-			height:250;
+			height:200;
+            width:100%
 		}
 		.body-template textview{
 			font-size:20;

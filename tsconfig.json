@@ -6,7 +6,9 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "allowUnreachableCode": true,
+    "skipLibCheck": true
   },
   "files": [
     "nativescript-ng2-parallax.ts"
