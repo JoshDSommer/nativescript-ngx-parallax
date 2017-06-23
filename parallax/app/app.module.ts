@@ -1,6 +1,5 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
-import { AppRoutingModule } from "./app.routing";
 import { AppComponent } from "./app.component";
 
 import { ParallaxModule } from './parallax.module';
@@ -11,15 +10,12 @@ import { ParallaxModule } from './parallax.module';
     ],
     imports: [
         NativeScriptModule,
-        AppRoutingModule
+        ParallaxModule
     ],
     declarations: [
         AppComponent,
-        ItemsComponent,
-        ItemDetailComponent
     ],
     providers: [
-        ItemService
     ],
     schemas: [
         NO_ERRORS_SCHEMA
