@@ -26,8 +26,8 @@
   "homepage": "https://github.com/TheOriginalJosh/nativescript-ng2-parallax#readme",
   "scripts": {
     "build": "tsc --skipLibCheck",
-    "dev.ios": "npm run preparedev; cd parallax; tns run ios",
-    "dev.android": "npm run preparedev &&  cd parallax && tns run android",
+    "dev.ios": "cd parallax &&  tns run ios",
+    "dev.android": " cd parallax && tns run android",
     "preparedev": "npm run build &&  cd parallax &&  npm install.. ;"
   }
 }
