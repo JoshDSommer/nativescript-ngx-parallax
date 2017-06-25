@@ -1,8 +1,8 @@
 {
-  "name": "nativescript-ng2-parallax",
+  "name": "nativescript-ngx-parallax",
   "version": "0.1.9",
   "description": "Parallax NativeScript + Angular plugin.",
-  "main": "nativescript-ng2-parallax.js",
+  "main": "nativescript-ngx-parallax",
   "nativescript": {
     "platforms": {
       "android": "3.0.1",
@@ -11,19 +11,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TheOriginalJosh/nativescript-ng2-parallax.git"
+    "url": "git+https://github.com/TheOriginalJosh/nativescript-ngx-parallax.git"
   },
   "keywords": [
     "angular2",
-    "ng2",
+    "ngx",
     "nativescript"
   ],
   "author": "Josh Sommer <joshdsommer@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TheOriginalJosh/nativescript-ng2-parallax/issues"
+    "url": "https://github.com/TheOriginalJosh/nativescript-ngx-parallax/issues"
   },
-  "homepage": "https://github.com/TheOriginalJosh/nativescript-ng2-parallax#readme",
+  "homepage": "https://github.com/TheOriginalJosh/nativescript-ngx-parallax#readme",
   "scripts": {
     "build": "tsc --skipLibCheck",
     "dev.ios": "cd parallax &&  tns run ios",
