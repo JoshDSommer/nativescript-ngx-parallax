@@ -50,10 +50,10 @@ export class ParallaxComponent implements OnInit {
 
 		//find each control specified to fade.
 		this.controlsToFade.forEach((id: string): void => {
-			// let newView = this._page.getViewById(id);
-			// if (newView != null) {
-			// 	this._viewsToFade.push(newView);
-			// }
+			let newView = this._page.getViewById(id) as View;
+			if (newView != null) {
+				this._viewsToFade.push(newView);
+			}
 		});
 
 		this._scrollView = <ScrollView>this._page.getViewById('scrollView');
