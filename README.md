@@ -1,4 +1,7 @@
-#NativeScript Angular2 parallax view component
+#DEPRICATED
+## I'm no longer maintaining this plugin infavor of using this [NativeScript Parallax Playground](https://play.nativescript.org/?template=play-ng&id=DXJkOJ&v=9) techinque to create a parallax scroll effect. 
+
+## NativeScript Angular2 parallax view component
 
 [![npm](https://img.shields.io/npm/v/nativescript-ng2-parallax.svg)](https://www.npmjs.com/package/nativescript-ng2-parallax)
 [![npm](https://img.shields.io/npm/dt/nativescript-ng2-parallax.svg?label=npm%20downloads)](https://www.npmjs.com/package/nativescript-ng2-parallax)
